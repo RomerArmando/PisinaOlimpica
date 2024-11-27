@@ -1,0 +1,29 @@
+.landing-page {
+    text-align: center;
+    padding: 50px;
+  }
+  
+  .header {
+    background-color: #f8f9fa;
+    padding: 30px;
+    border-radius: 10px;
+  }
+  
+  .navbar {
+    background-color: #007bff;
+    padding: 10px;
+  }
+  
+  .nav-link {
+    color: white !important;
+    font-size: 18px;
+  }
+  
+  .nav-link:hover {
+    color: #ffcc00 !important;
+  }
+  
+  .content {
+    margin-top: 30px;
+  }
+  

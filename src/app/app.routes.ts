@@ -30,5 +30,5 @@ export const routes: Routes = [
       component: DashboardComponent,
       canActivate: [authGuard],
     },
-    { path: '**', redirectTo: '' }, // Para redirigir cualquier ruta no definida a la página principal
+    { path: '**', redirectTo: '' },
   ];

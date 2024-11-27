@@ -1,43 +1,135 @@
-<div class="landing-page">
-    <div class="header">
-      <h1>Bienvenidos a la Piscina Olímpica del Perú</h1>
-      <p>Gestiona turnos, niveles, horas trabajadas y más</p>
-    </div>
-  
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+<nav class="navbar navbar-dark bg-dark fixed-top">
+    <div class="container-fluid">
       <a class="navbar-brand" href="#">Piscina Olímpica</a>
       <button
         class="navbar-toggler"
         type="button"
-        data-toggle="collapse"
-        data-target="#navbarNav"
-        aria-controls="navbarNav"
-        aria-expanded="false"
+        data-bs-toggle="offcanvas"
+        data-bs-target="#offcanvasDarkNavbar"
+        aria-controls="offcanvasDarkNavbar"
         aria-label="Toggle navigation"
       >
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <button class="btn btn-link nav-link" (click)="navigateTo('horas')">Horas</button>
-          </li>
-          <li class="nav-item">
-            <button class="btn btn-link nav-link" (click)="navigateTo('turnos')">Turnos</button>
-          </li>
-          <li class="nav-item">
-            <button class="btn btn-link nav-link" (click)="navigateTo('niveles')">Niveles</button>
-          </li>
-          <li class="nav-item">
-            <button class="btn btn-link nav-link" (click)="navigateTo('dashboard')">Dashboard</button>
-          </li>
-        </ul>
+      <div
+        class="offcanvas offcanvas-end text-bg-dark"
+        tabindex="-1"
+        id="offcanvasDarkNavbar"
+        aria-labelledby="offcanvasDarkNavbarLabel"
+      >
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Menú</h5>
+          <button
+            type="button"
+            class="btn-close btn-close-white"
+            data-bs-dismiss="offcanvas"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+            <li class="nav-item">
+              <button
+                class="btn btn-link nav-link text-white"
+                (click)="navigateTo('horas')"
+              >
+                Horas
+              </button>
+            </li>
+            <li class="nav-item">
+              <button
+                class="btn btn-link nav-link text-white"
+                (click)="navigateTo('turnos')"
+              >
+                Turnos
+              </button>
+            </li>
+            <li class="nav-item">
+              <button
+                class="btn btn-link nav-link text-white"
+                (click)="navigateTo('niveles')"
+              >
+                Niveles
+              </button>
+            </li>
+            <li class="nav-item">
+              <button
+                class="btn btn-link nav-link text-white"
+                (click)="navigateTo('dashboard')"
+              >
+                Dashboard
+              </button>
+            </li>
+          </ul>
+        </div>
       </div>
-    </nav>
-  
-    <div class="content">
-      <h2>¡Bienvenido a nuestro sistema de gestión!</h2>
-      <p>Usa las opciones de arriba para navegar y gestionar la piscina olímpica.</p>
     </div>
-  </div>
+  </nav>
+  
+  <header id="Inicio" class="bg-primary text-white text-center py-5">
+    <div class="container">
+      <h1>Bienvenidos a la Piscina Olímpica</h1>
+      <p class="lead">Explora nuestras opciones de turnos, niveles y más.</p>
+    </div>
+  </header>
+  
+  <section id="Horas" class="container mt-5">
+    <h2 class="text-center">Horas</h2>
+    <div class="row">
+      <div class="col-md-6">
+        <img
+          src="https://scontent.flim33-1.fna.fbcdn.net/v/t39.30808-6/328314061_980369333344151_8670325972738851318_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeEvO0EiHaVeKeWzNVnCAbWv40FG5b4duvbjQUblvh269nlYKmd6UrCDPYEugYOMfot1U9zDBntUoSj9O2LSYsKj&_nc_ohc=ymFkkzlWiHMQ7kNvgHbgwOF&_nc_zt=23&_nc_ht=scontent.flim33-1.fna&_nc_gid=AZ4Zy_InRJNKroqNDshzHGQ&oh=00_AYB5s6XOeKenCEzQygPSTti279Hk5CXySCFDnWvVMOv58Q&oe=674D89FF"
+          class="img-fluid rounded"
+          alt="Horas"
+        />
+      </div>
+      <div class="col-md-6">
+        <p>Gestiona las horas de tus actividades y consulta reportes específicos.</p>
+      </div>
+    </div>
+  </section>
+  
+  <section id="Turnos" class="container mt-5">
+    <h2 class="text-center">Turnos</h2>
+    <div class="row">
+      <div class="col-md-6 order-md-2">
+        <img
+          src="https://scontent.flim33-1.fna.fbcdn.net/v/t39.30808-6/328696663_3331540560399860_6367596652812449629_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeGuSHpSyVR3C-Ri42enf6dbcq3rnWoYqZ1yreudahipnY75_tTsb1QLLCEOUYeEIWCehhNxXxaUu41SdeQiJIaM&_nc_ohc=8MDkLiYwV7oQ7kNvgFNLuld&_nc_zt=23&_nc_ht=scontent.flim33-1.fna&_nc_gid=AcvLFwDgPYLzRlvW0P5x2Us&oh=00_AYBPsW-l7oI5cXhBGnerBmNaHXdKsOOS4BsETEFNJdsZCA&oe=674D6800"
+          class="img-fluid rounded"
+          alt="Turnos"
+        />
+      </div>
+      <div class="col-md-6">
+        <p>Consulta y organiza los turnos disponibles según tus necesidades.</p>
+      </div>
+    </div>
+  </section>
+  
+  <section id="Niveles" class="container mt-5">
+    <h2 class="text-center">Niveles</h2>
+    <div class="row">
+      <div class="col-md-6">
+        <img
+          src="https://scontent.flim33-1.fna.fbcdn.net/v/t39.30808-6/328491434_439873194939052_2820792931470984435_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeHE56Y93kOXY4zjvgfuJBAvFoTdqUMfy48WhN2pQx_Lj3zr6hr84d7OSBhNYHap_begOUD6rVareQLu_O8YSf04&_nc_ohc=bY5kOEb1RbsQ7kNvgEtMMBl&_nc_zt=23&_nc_ht=scontent.flim33-1.fna&_nc_gid=AmVb-ypK6qahhYCodRjVPft&oh=00_AYBOKJ7hMgTjQXYOqiIO94aA96QvPAbcuMmFSSVOAFr6lA&oe=674D96C9"
+          class="img-fluid rounded"
+          alt="Niveles"
+        />
+      </div>
+      <div class="col-md-6">
+        <p>Explora los diferentes niveles de aprendizaje que ofrecemos.</p>
+      </div>
+    </div>
+  </section>
+  
+  <section id="Dashboard" class="container mt-5">
+    <h2 class="text-center">Dashboard</h2>
+    <p class="text-center">
+      Consulta todos los reportes y estadísticas importantes en nuestro panel.
+    </p>
+  </section>
+  
+  <footer class="bg-dark text-white text-center py-3 mt-5">
+    <p>&copy; 2024 Piscina Olímpica. Todos los derechos reservados.</p>
+  </footer>
   
