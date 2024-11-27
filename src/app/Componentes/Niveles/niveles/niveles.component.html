@@ -1,0 +1,15 @@
+<div class="container mt-4">
+    <h2>Niveles</h2>
+    <form (ngSubmit)="addNivel()">
+      <input type="text" [(ngModel)]="newNivel.nombre" name="nombre" placeholder="Nombre del Nivel" required />
+      <button type="submit" class="btn btn-primary">Agregar Nivel</button>
+    </form>
+  
+    <ul class="list-group mt-3">
+      <li *ngFor="let nivel of niveles" class="list-group-item">
+        {{ nivel.nombre }}
+        <button (click)="deleteNivel(nivel.id)" class="btn btn-danger btn-sm float-end">Eliminar</button>
+      </li>
+    </ul>
+  </div>
+  

@@ -1,0 +1,43 @@
+<div class="landing-page">
+    <div class="header">
+      <h1>Bienvenidos a la Piscina Olímpica del Perú</h1>
+      <p>Gestiona turnos, niveles, horas trabajadas y más</p>
+    </div>
+  
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#">Piscina Olímpica</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <button class="btn btn-link nav-link" (click)="navigateTo('horas')">Horas</button>
+          </li>
+          <li class="nav-item">
+            <button class="btn btn-link nav-link" (click)="navigateTo('turnos')">Turnos</button>
+          </li>
+          <li class="nav-item">
+            <button class="btn btn-link nav-link" (click)="navigateTo('niveles')">Niveles</button>
+          </li>
+          <li class="nav-item">
+            <button class="btn btn-link nav-link" (click)="navigateTo('dashboard')">Dashboard</button>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  
+    <div class="content">
+      <h2>¡Bienvenido a nuestro sistema de gestión!</h2>
+      <p>Usa las opciones de arriba para navegar y gestionar la piscina olímpica.</p>
+    </div>
+  </div>
+  

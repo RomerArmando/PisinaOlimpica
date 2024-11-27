@@ -1,0 +1,17 @@
+<div class="container mt-4">
+    <h2>Horas Trabajadas</h2>
+    <form (ngSubmit)="addHora()">
+      <input type="number" [(ngModel)]="newHora.profesorId" name="profesorId" placeholder="ID del Profesor" required />
+      <input type="number" [(ngModel)]="newHora.cantidadHoras" name="cantidadHoras" placeholder="Horas trabajadas" required />
+      <input type="date" [(ngModel)]="newHora.fecha" name="fecha" required />
+      <button type="submit" class="btn btn-primary">Agregar Hora</button>
+    </form>
+  
+    <ul class="list-group mt-3">
+      <li *ngFor="let hora of horas" class="list-group-item">
+        {{ hora.profesorId }} - {{ hora.cantidadHoras }} horas - {{ hora.fecha }}
+        <button (click)="deleteHora(hora.id)" class="btn btn-danger btn-sm float-end">Eliminar</button>
+      </li>
+    </ul>
+  </div>
+  

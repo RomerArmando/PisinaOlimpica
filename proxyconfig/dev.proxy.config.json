@@ -1,0 +1,11 @@
+{
+    "/api": {
+      "target": "https://soluciones-hqh3efgthcfbhxcg.canadacentral-01.azurewebsites.net",
+      "secure": true,
+      "changeOrigin": true,
+      "pathRewrite": {
+        "^/api": ""  
+      }
+    }
+  }
+  

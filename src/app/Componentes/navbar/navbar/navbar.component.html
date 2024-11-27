@@ -1,0 +1,34 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Piscina Olímpica</a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-toggle="collapse"
+      data-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/dashboard">Inicio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/horas">Horas</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/turnos">Turnos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/niveles">Niveles</a>
+        </li>
+        <li class="nav-item">
+          <button class="btn btn-danger" (click)="logout()">Cerrar sesión</button>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  

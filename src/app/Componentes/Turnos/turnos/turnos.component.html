@@ -1,0 +1,17 @@
+<div class="container mt-4">
+    <h2>Turnos</h2>
+    <form (ngSubmit)="addTurno()">
+      <input type="text" [(ngModel)]="newTurno.nombre" name="nombre" placeholder="Nombre del Turno" required />
+      <input type="time" [(ngModel)]="newTurno.horaInicio" name="horaInicio" required />
+      <input type="time" [(ngModel)]="newTurno.horaFin" name="horaFin" required />
+      <button type="submit" class="btn btn-primary">Agregar Turno</button>
+    </form>
+  
+    <ul class="list-group mt-3">
+      <li *ngFor="let turno of turnos" class="list-group-item">
+        {{ turno.nombre }} - {{ turno.horaInicio }} a {{ turno.horaFin }}
+        <button (click)="deleteTurno(turno.id)" class="btn btn-danger btn-sm float-end">Eliminar</button>
+      </li>
+    </ul>
+  </div>
+  
