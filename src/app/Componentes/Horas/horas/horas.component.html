@@ -9,8 +9,8 @@
       <label for="profesorId" class="form-label">ID del Profesor:</label>
       <input
         type="text"
-        id="profesorId"
-        [(ngModel)]="newHora.profesorId"
+        id="usuarioId"
+        [(ngModel)]="newHora.usuarioId"
         name="profesorId"
         class="form-control"
         placeholder="ID del Profesor"
@@ -18,25 +18,26 @@
       />
     </div>
     <div class="mb-3 w-75">
-      <label for="cantidadHoras" class="form-label">Cantidad de Horas:</label>
+      <label for="alumnos" class="form-label">Cantidad de Alumnos:</label>
       <input
         type="number"
-        id="cantidadHoras"
-        [(ngModel)]="newHora.cantidadHoras"
-        name="cantidadHoras"
+        id="alumnos"
+        [(ngModel)]="newHora.alumnos"
+        name="cantidadAlumnos"
         class="form-control"
-        placeholder="Cantidad de Horas"
+        placeholder="Cantidad de Alumnos"
         required
       />
     </div>
     <div class="mb-3 w-75">
-      <label for="fecha" class="form-label">Fecha:</label>
+      <label for="nivelId" class="form-label">Nivel, razon:</label>
       <input
-        type="date"
-        id="fecha"
-        [(ngModel)]="newHora.fecha"
-        name="fecha"
+        type="number"
+        id="nivel"
+        [(ngModel)]="newHora.nivelId"
+        name="nivelId"
         class="form-control"
+        placeholder="Nivel"
         required
       />
     </div>
@@ -51,9 +52,12 @@
         class="list-group-item d-flex justify-content-between align-items-center"
       >
         <div>
-          <strong>Profesor ID:</strong> {{ hora.profesorId }} <br />
-          <strong>Horas:</strong> {{ hora.cantidadHoras }} <br />
-          <strong>Fecha:</strong> {{ hora.fecha }}
+          <strong>Profesor:</strong> {{ hora.profesor.persona.nombre }} {{ hora.profesor.persona.apellido }} <br />
+          <strong>Turno:</strong> {{ hora.turno.nombre }} ({{ hora.turno.horaInicio }} - {{ hora.turno.horaFin }})<br />
+          <strong>Fecha:</strong> {{ hora.fecha }} <br />
+          <strong>Alumnos:</strong> {{ hora.alumnos }} <br />
+          <strong>Hora:</strong> {{ hora.hora }} <br />
+          <strong>Nivel:</strong> {{ hora.nivel.descripcion }}
         </div>
         <button
           (click)="deleteHora(hora.id)"

@@ -16,7 +16,7 @@ export class AuthService {
     return this.http.post(ApiEndpoints.AUTH.LOGIN, body).pipe(
       tap((res: any) => {
         if (res.data && res.data.token) {
-          this.saveToken(res.data.token);  // Guardamos el token usando la respuesta correcta
+          this.saveToken(res.data.token);  
         }
       })
     );
@@ -24,7 +24,7 @@ export class AuthService {
 
   saveToken(token: string) {
     if (this.isBrowser()) {
-      localStorage.setItem('authToken', token);  // Guardamos el token en localStorage
+      localStorage.setItem('authToken', token);  
     } else {
       console.error('No se puede acceder a localStorage fuera del navegador.');
     }
@@ -32,20 +32,20 @@ export class AuthService {
 
   getToken() {
     if (this.isBrowser()) {
-      return localStorage.getItem('authToken');  // Recuperamos el token desde localStorage
+      return localStorage.getItem('authToken'); 
     }
-    return null;  // Si no estamos en el navegador, devolvemos null
+    return null; 
   }
 
   logout() {
     if (this.isBrowser()) {
-      localStorage.removeItem('authToken');  // Eliminamos el token cuando se hace logout
+      localStorage.removeItem('authToken');
     }
     this.router.navigate(['/auth/login']);
   }
 
   isLoggedIn() {
-    return !!this.getToken();  // Verificamos si el token está presente en localStorage
+    return !!this.getToken(); 
   }
 
   private isBrowser(): boolean {

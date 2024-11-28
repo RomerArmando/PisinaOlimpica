@@ -9,6 +9,7 @@ export const ApiEndpoints = {
     ADD: `${API_BASE_URL}/horas/add`,
     GET_ALL: `${API_BASE_URL}/horas/get`,
     GET_BY_USER: (userId: number) => `${API_BASE_URL}/horas/get/${userId}`,
+    DELETE: (horaId: number) => `${API_BASE_URL}/horas/delete/${horaId}`,
   },
   USUARIOS: {
     BASE: `${API_BASE_URL}/usuario`,

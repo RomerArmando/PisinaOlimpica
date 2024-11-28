@@ -12,7 +12,11 @@ import { FormsModule } from '@angular/forms';
 })
 export class HorasComponent implements OnInit {
   horas: any[] = [];
-  newHora: any = { profesorId: '', cantidadHoras: '', fecha: '' };
+  newHora: any = { 
+    usuarioId: '',
+     alumnos: '', 
+     nivelId: '' 
+    };
 
   constructor(private horasService: HorasService) {}
 
@@ -20,9 +24,14 @@ export class HorasComponent implements OnInit {
     this.loadHoras();
   }
 
-  loadHoras() {
-    this.horasService.getAll().subscribe((data: any) => {
-      this.horas = data;
+  loadHoras(): void {
+    this.horasService.getAll().subscribe((response: any) => {
+      if (response && response.status === 'success') {
+        this.horas = response.data; 
+      } else {
+        console.error('Error al cargar las horas:', response.message);
+        this.horas = [];
+      }
     });
   }
 
@@ -33,6 +42,8 @@ export class HorasComponent implements OnInit {
   }
 
   deleteHora(horaId: number) {
-  
+    this.horasService.delete(horaId).subscribe(() => {
+      this.loadHoras();
+    });
   }
 }
