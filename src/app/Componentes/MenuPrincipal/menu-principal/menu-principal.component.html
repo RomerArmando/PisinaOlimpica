@@ -1,135 +1,144 @@
+   <nav class="navbar navbar-dark bg-dark fixed-top">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Piscina Olímpica</a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="offcanvas"
+      data-bs-target="#offcanvasDarkNavbar"
+      aria-controls="offcanvasDarkNavbar"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div
+      class="offcanvas offcanvas-end text-bg-dark"
+      tabindex="-1"
+      id="offcanvasDarkNavbar"
+      aria-labelledby="offcanvasDarkNavbarLabel"
+    >
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Menú</h5>
+        <button
+          type="button"
+          class="btn-close btn-close-white"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+          <li class="nav-item">
+            <button
+              class="btn btn-link nav-link text-white"
+              (click)="navigateTo('horas')"
+            >
+              Horas
+            </button>
+          </li>
+          <li class="nav-item">
+            <button
+              class="btn btn-link nav-link text-white"
+              (click)="navigateTo('turnos')"
+            >
+              Turnos
+            </button>
+          </li>
+          <li class="nav-item">
+            <button
+              class="btn btn-link nav-link text-white"
+              (click)="navigateTo('niveles')"
+            >
+              Niveles
+            </button>
+          </li>
+          <li class="nav-item">
+            <button
+              class="btn btn-link nav-link text-white"
+              (click)="navigateTo('dashboard')"
+            >
+              Dashboard
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>
 
-<nav class="navbar navbar-dark bg-dark fixed-top">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">Piscina Olímpica</a>
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-bs-toggle="offcanvas"
-        data-bs-target="#offcanvasDarkNavbar"
-        aria-controls="offcanvasDarkNavbar"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div
-        class="offcanvas offcanvas-end text-bg-dark"
-        tabindex="-1"
-        id="offcanvasDarkNavbar"
-        aria-labelledby="offcanvasDarkNavbarLabel"
-      >
-        <div class="offcanvas-header">
-          <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Menú</h5>
-          <button
-            type="button"
-            class="btn-close btn-close-white"
-            data-bs-dismiss="offcanvas"
-            aria-label="Close"
-          ></button>
+    <header id="Inicio" class="gradient-bg text-white text-center py-5">
+        <div class="container mt-5">
+            <h1>Bienvenidos a la Piscina Olímpica</h1>
+            <p class="lead">Explora nuestras opciones de turnos, niveles y más.</p>
         </div>
-        <div class="offcanvas-body">
-          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-            <li class="nav-item">
-              <button
-                class="btn btn-link nav-link text-white"
-                (click)="navigateTo('horas')"
-              >
-                Horas
-              </button>
-            </li>
-            <li class="nav-item">
-              <button
-                class="btn btn-link nav-link text-white"
-                (click)="navigateTo('turnos')"
-              >
-                Turnos
-              </button>
-            </li>
-            <li class="nav-item">
-              <button
-                class="btn btn-link nav-link text-white"
-                (click)="navigateTo('niveles')"
-              >
-                Niveles
-              </button>
-            </li>
-            <li class="nav-item">
-              <button
-                class="btn btn-link nav-link text-white"
-                (click)="navigateTo('dashboard')"
-              >
-                Dashboard
-              </button>
-            </li>
-          </ul>
+    </header>
+
+    <section id="Horas" class="section-gradient container mt-5">
+        <h2 class="text-center">Horas</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <img
+                    src="https://scontent.flim33-1.fna.fbcdn.net/v/t39.30808-6/328314061_980369333344151_8670325972738851318_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeEvO0EiHaVeKeWzNVnCAbWv40FG5b4duvbjQUblvh269nlYKmd6UrCDPYEugYOMfot1U9zDBntUoSj9O2LSYsKj&_nc_ohc=ymFkkzlWiHMQ7kNvgHbgwOF&_nc_zt=23&_nc_ht=scontent.flim33-1.fna&_nc_gid=AZ4Zy_InRJNKroqNDshzHGQ&oh=00_AYB5s6XOeKenCEzQygPSTti279Hk5CXySCFDnWvVMOv58Q&oe=674D89FF"
+                    class="img-fluid rounded"
+                    alt="Horas"
+                />
+            </div>
+            <div class="col-md-6">
+                <p>Recuerda llegar a tiempo a todas tus clases, ya que la puntualidad es una cualidad esencial que refleja respeto hacia tus estudiantes y compromiso con tu labor. Ser puntual no solo asegura el cumplimiento del horario, sino que también establece un estándar profesional y ético que inspira a tus alumnos a valorar el tiempo. Cada minuto cuenta en el proceso de aprendizaje, y comenzar una clase a tiempo permite desarrollar el contenido completo sin interrupciones ni retrasos. Además, llegar a tiempo demuestra preparación y organización, generando confianza en los estudiantes y en tus colegas.
+
+                    La puntualidad no solo es importante para las clases en sí, sino también para las reuniones, actividades extracurriculares y eventos escolares. Es un ejemplo de disciplina que fomenta un ambiente de trabajo eficiente y colaborativo. En caso de imprevistos, comunica con anticipación tu situación para mantener la confianza y el respeto mutuo. Recuerda que, como profesor, tu comportamiento es un modelo a seguir para los estudiantes, quienes verán en tu puntualidad un valor que podrán aplicar en su vida académica y profesional.</p>
+            </div>
         </div>
-      </div>
-    </div>
-  </nav>
-  
-  <header id="Inicio" class="bg-primary text-white text-center py-5">
+    </section>
+
+    <section id="Turnos" class="section-gradient container mt-5">
+        <h2 class="text-center">Turnos</h2>
+        <div class="row">
+            <div class="col-md-6 order-md-2">
+                <img
+                    src="https://scontent.flim33-1.fna.fbcdn.net/v/t39.30808-6/328696663_3331540560399860_6367596652812449629_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeGuSHpSyVR3C-Ri42enf6dbcq3rnWoYqZ1yreudahipnY75_tTsb1QLLCEOUYeEIWCehhNxXxaUu41SdeQiJIaM&_nc_ohc=8MDkLiYwV7oQ7kNvgFNLuld&_nc_zt=23&_nc_ht=scontent.flim33-1.fna&_nc_gid=AcvLFwDgPYLzRlvW0P5x2Us&oh=00_AYBPsW-l7oI5cXhBGnerBmNaHXdKsOOS4BsETEFNJdsZCA&oe=674D6800"
+                    class="img-fluid rounded"
+                    alt="Turnos"
+                />
+            </div>
+            <div class="col-md-6">
+                <p>Es fundamental respetar y adherirse a los turnos asignados para las clases, ya que el cumplimiento de los horarios establecidos garantiza una organización eficiente dentro de la institución y un entorno de aprendizaje óptimo para todos. Ser consciente de los turnos asignados demuestra responsabilidad y compromiso con tu rol como educador. Cada turno tiene un propósito específico, y al seguirlo, no solo ayudas a mantener la fluidez del calendario escolar, sino que también contribuyes al bienestar de los estudiantes, quienes dependen de un horario claro y predecible para su aprendizaje.
+
+                    Los turnos también permiten que todos los docentes tengan el tiempo y los recursos necesarios para cumplir con sus responsabilidades, sin interferir con el trabajo de los demás. Es importante tener en cuenta que cualquier cambio en tu turno debe ser comunicado con anticipación, para que se pueda organizar de manera adecuada y no afectar el flujo de trabajo. La flexibilidad es valiosa, pero también lo es la coherencia y la puntualidad. Al cumplir con los turnos establecidos, demuestras que valoras tanto el tiempo de los estudiantes como el de tus colegas, promoviendo un ambiente colaborativo y de respeto..</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="Niveles" class="section-gradient container mt-5">
+        <h2 class="text-center">Niveles</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <img
+                    src="https://scontent.flim33-1.fna.fbcdn.net/v/t39.30808-6/328491434_439873194939052_2820792931470984435_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeHE56Y93kOXY4zjvgfuJBAvFoTdqUMfy48WhN2pQx_Lj3zr6hr84d7OSBhNYHap_begOUD6rVareQLu_O8YSf04&_nc_ohc=bY5kOEb1RbsQ7kNvgEtMMBl&_nc_zt=23&_nc_ht=scontent.flim33-1.fna&_nc_gid=AmVb-ypK6qahhYCodRjVPft&oh=00_AYBOKJ7hMgTjQXYOqiIO94aA96QvPAbcuMmFSSVOAFr6lA&oe=674D96C9"
+                    class="img-fluid rounded"
+                    alt="Niveles"
+                />
+            </div>
+            <div class="col-md-6">
+                <p>En esta temporada navideña, quiero aprovechar la oportunidad para agradecerles por su arduo trabajo, dedicación y compromiso a lo largo del año. La Navidad es un momento especial para reflexionar sobre los logros alcanzados y los desafíos superados. Como educadores, han dejado una huella significativa en la vida de cada estudiante, guiándolos con paciencia y pasión hacia el aprendizaje.
+
+                    La Navidad nos recuerda la importancia de la solidaridad, el amor y la generosidad, y ustedes, con su ejemplo diario, enseñan estos valores a sus estudiantes no solo con palabras, sino con acciones. Que esta época de fiestas les brinde momentos de descanso, alegría y la oportunidad de disfrutar con sus seres queridos.
+                    
+                    Les deseo una Navidad llena de paz, esperanza y gratitud, y un Año Nuevo lleno de nuevos comienzos, sueños cumplidos y muchas satisfacciones personales y profesionales. ¡Gracias por todo lo que hacen! Que el espíritu de la Navidad ilumine su camino.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="Dashboard" class="section-gradient container mt-5">
+        <h2 class="text-center">Dashboard</h2>
+        <p class="text-center">
+            Consulta todos los reportes y estadísticas importantes en nuestro panel.
+        </p>
+    </section>
+
+   <footer class="gradient-bg text-white text-center py-3 mt-5">
     <div class="container">
-      <h1>Bienvenidos a la Piscina Olímpica</h1>
-      <p class="lead">Explora nuestras opciones de turnos, niveles y más.</p>
+        <p>&copy; 2024 Piscina Olímpica. Todos los derechos reservados.</p>
     </div>
-  </header>
-  
-  <section id="Horas" class="container mt-5">
-    <h2 class="text-center">Horas</h2>
-    <div class="row">
-      <div class="col-md-6">
-        <img
-          src="https://scontent.flim33-1.fna.fbcdn.net/v/t39.30808-6/328314061_980369333344151_8670325972738851318_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeEvO0EiHaVeKeWzNVnCAbWv40FG5b4duvbjQUblvh269nlYKmd6UrCDPYEugYOMfot1U9zDBntUoSj9O2LSYsKj&_nc_ohc=ymFkkzlWiHMQ7kNvgHbgwOF&_nc_zt=23&_nc_ht=scontent.flim33-1.fna&_nc_gid=AZ4Zy_InRJNKroqNDshzHGQ&oh=00_AYB5s6XOeKenCEzQygPSTti279Hk5CXySCFDnWvVMOv58Q&oe=674D89FF"
-          class="img-fluid rounded"
-          alt="Horas"
-        />
-      </div>
-      <div class="col-md-6">
-        <p>Gestiona las horas de tus actividades y consulta reportes específicos.</p>
-      </div>
-    </div>
-  </section>
-  
-  <section id="Turnos" class="container mt-5">
-    <h2 class="text-center">Turnos</h2>
-    <div class="row">
-      <div class="col-md-6 order-md-2">
-        <img
-          src="https://scontent.flim33-1.fna.fbcdn.net/v/t39.30808-6/328696663_3331540560399860_6367596652812449629_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeGuSHpSyVR3C-Ri42enf6dbcq3rnWoYqZ1yreudahipnY75_tTsb1QLLCEOUYeEIWCehhNxXxaUu41SdeQiJIaM&_nc_ohc=8MDkLiYwV7oQ7kNvgFNLuld&_nc_zt=23&_nc_ht=scontent.flim33-1.fna&_nc_gid=AcvLFwDgPYLzRlvW0P5x2Us&oh=00_AYBPsW-l7oI5cXhBGnerBmNaHXdKsOOS4BsETEFNJdsZCA&oe=674D6800"
-          class="img-fluid rounded"
-          alt="Turnos"
-        />
-      </div>
-      <div class="col-md-6">
-        <p>Consulta y organiza los turnos disponibles según tus necesidades.</p>
-      </div>
-    </div>
-  </section>
-  
-  <section id="Niveles" class="container mt-5">
-    <h2 class="text-center">Niveles</h2>
-    <div class="row">
-      <div class="col-md-6">
-        <img
-          src="https://scontent.flim33-1.fna.fbcdn.net/v/t39.30808-6/328491434_439873194939052_2820792931470984435_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeHE56Y93kOXY4zjvgfuJBAvFoTdqUMfy48WhN2pQx_Lj3zr6hr84d7OSBhNYHap_begOUD6rVareQLu_O8YSf04&_nc_ohc=bY5kOEb1RbsQ7kNvgEtMMBl&_nc_zt=23&_nc_ht=scontent.flim33-1.fna&_nc_gid=AmVb-ypK6qahhYCodRjVPft&oh=00_AYBOKJ7hMgTjQXYOqiIO94aA96QvPAbcuMmFSSVOAFr6lA&oe=674D96C9"
-          class="img-fluid rounded"
-          alt="Niveles"
-        />
-      </div>
-      <div class="col-md-6">
-        <p>Explora los diferentes niveles de aprendizaje que ofrecemos.</p>
-      </div>
-    </div>
-  </section>
-  
-  <section id="Dashboard" class="container mt-5">
-    <h2 class="text-center">Dashboard</h2>
-    <p class="text-center">
-      Consulta todos los reportes y estadísticas importantes en nuestro panel.
-    </p>
-  </section>
-  
-  <footer class="bg-dark text-white text-center py-3 mt-5">
-    <p>&copy; 2024 Piscina Olímpica. Todos los derechos reservados.</p>
-  </footer>
-  
+</footer>
+

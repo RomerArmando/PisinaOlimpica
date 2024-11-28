@@ -26,4 +26,37 @@
   .content {
     margin-top: 30px;
   }
+
+   .gradient-bg {
+    background: linear-gradient(90deg, red, purple, blue);
+    color: white;
+}
+
+.section-gradient {
+    background: linear-gradient(120deg, #ff7b7b, #935dff, #3da9fc);
+    color: white;
+    padding: 50px 20px;
+}
+
+
+.rounded {
+    border-radius: 15px;
+}
+
+p {
   
+    text-align: justify;
+}
+
+footer {
+    text-align: center;  
+    width: 100%;         
+    padding: 20px 0;     
+}
+
+footer .container {
+    width: 100%;
+    display: flex;
+    justify-content: center; 
+    align-items: center;      
+}
