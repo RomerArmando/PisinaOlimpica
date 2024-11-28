@@ -13,6 +13,7 @@ export class AuthInterceptor implements HttpInterceptor {
 
     const token = this.isBrowser() ? localStorage.getItem('authToken') : null;
 
+
     if (token) {
       console.log('Token encontrado y añadido al encabezado:', token);
 

@@ -1,15 +1,42 @@
-<div class="container mt-4">
-    <h2>Niveles</h2>
-    <form (ngSubmit)="addNivel()">
-      <input type="text" [(ngModel)]="newNivel.nombre" name="nombre" placeholder="Nombre del Nivel" required />
-      <button type="submit" class="btn btn-primary">Agregar Nivel</button>
-    </form>
-  
+<div class="container mt-5 p-4 gradient-bg rounded text-white">
+  <h2 class="text-center">Gestión de Niveles</h2>
+  <p class="text-center lead">
+    Añade, visualiza y administra los niveles de aprendizaje.
+  </p>
+
+  <!-- Formulario para agregar niveles -->
+  <form (ngSubmit)="addNivel()" class="d-flex flex-column align-items-center mt-4">
+    <div class="mb-3 w-75">
+      <label for="nombreNivel" class="form-label">Nombre del Nivel:</label>
+      <input
+        type="text"
+        id="nombreNivel"
+        [(ngModel)]="newNivel.nombre"
+        name="nombre"
+        class="form-control"
+        placeholder="Ejemplo: Nivel Principiante"
+        required
+      />
+    </div>
+    <button type="submit" class="btn btn-primary w-50">Agregar Nivel</button>
+  </form>
+
+  <!-- Lista de niveles -->
+  <div class="mt-5">
+    <h3 class="text-center">Lista de Niveles</h3>
     <ul class="list-group mt-3">
-      <li *ngFor="let nivel of niveles" class="list-group-item">
-        {{ nivel.nombre }}
-        <button (click)="deleteNivel(nivel.id)" class="btn btn-danger btn-sm float-end">Eliminar</button>
+      <li
+        *ngFor="let nivel of niveles"
+        class="list-group-item d-flex justify-content-between align-items-center"
+      >
+        <span>{{ nivel.nombre }}</span>
+        <button
+          (click)="deleteNivel(nivel.id)"
+          class="btn btn-danger btn-sm"
+        >
+          Eliminar
+        </button>
       </li>
     </ul>
   </div>
-  
+</div>

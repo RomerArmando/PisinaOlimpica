@@ -1,17 +1,67 @@
-<div class="container mt-4">
-    <h2>Horas Trabajadas</h2>
-    <form (ngSubmit)="addHora()">
-      <input type="number" [(ngModel)]="newHora.profesorId" name="profesorId" placeholder="ID del Profesor" required />
-      <input type="number" [(ngModel)]="newHora.cantidadHoras" name="cantidadHoras" placeholder="Horas trabajadas" required />
-      <input type="date" [(ngModel)]="newHora.fecha" name="fecha" required />
-      <button type="submit" class="btn btn-primary">Agregar Hora</button>
-    </form>
-  
+<div class="container mt-5 p-4 gradient-bg rounded text-white">
+  <h2 class="text-center">Gestión de Horas</h2>
+  <p class="text-center lead">
+    Añade, visualiza y gestiona las horas trabajadas de manera sencilla.
+  </p>
+
+  <form (ngSubmit)="addHora()" class="d-flex flex-column align-items-center mt-4">
+    <div class="mb-3 w-75">
+      <label for="profesorId" class="form-label">ID del Profesor:</label>
+      <input
+        type="text"
+        id="profesorId"
+        [(ngModel)]="newHora.profesorId"
+        name="profesorId"
+        class="form-control"
+        placeholder="ID del Profesor"
+        required
+      />
+    </div>
+    <div class="mb-3 w-75">
+      <label for="cantidadHoras" class="form-label">Cantidad de Horas:</label>
+      <input
+        type="number"
+        id="cantidadHoras"
+        [(ngModel)]="newHora.cantidadHoras"
+        name="cantidadHoras"
+        class="form-control"
+        placeholder="Cantidad de Horas"
+        required
+      />
+    </div>
+    <div class="mb-3 w-75">
+      <label for="fecha" class="form-label">Fecha:</label>
+      <input
+        type="date"
+        id="fecha"
+        [(ngModel)]="newHora.fecha"
+        name="fecha"
+        class="form-control"
+        required
+      />
+    </div>
+    <button type="submit" class="btn btn-primary w-50">Agregar Hora</button>
+  </form>
+
+  <div class="mt-5">
+    <h3 class="text-center">Lista de Horas</h3>
     <ul class="list-group mt-3">
-      <li *ngFor="let hora of horas" class="list-group-item">
-        {{ hora.profesorId }} - {{ hora.cantidadHoras }} horas - {{ hora.fecha }}
-        <button (click)="deleteHora(hora.id)" class="btn btn-danger btn-sm float-end">Eliminar</button>
+      <li
+        *ngFor="let hora of horas"
+        class="list-group-item d-flex justify-content-between align-items-center"
+      >
+        <div>
+          <strong>Profesor ID:</strong> {{ hora.profesorId }} <br />
+          <strong>Horas:</strong> {{ hora.cantidadHoras }} <br />
+          <strong>Fecha:</strong> {{ hora.fecha }}
+        </div>
+        <button
+          (click)="deleteHora(hora.id)"
+          class="btn btn-danger btn-sm"
+        >
+          Eliminar
+        </button>
       </li>
     </ul>
   </div>
-  
+</div>

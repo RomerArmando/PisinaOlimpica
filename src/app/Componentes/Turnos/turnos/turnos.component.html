@@ -1,17 +1,65 @@
-<div class="container mt-4">
-    <h2>Turnos</h2>
-    <form (ngSubmit)="addTurno()">
-      <input type="text" [(ngModel)]="newTurno.nombre" name="nombre" placeholder="Nombre del Turno" required />
-      <input type="time" [(ngModel)]="newTurno.horaInicio" name="horaInicio" required />
-      <input type="time" [(ngModel)]="newTurno.horaFin" name="horaFin" required />
-      <button type="submit" class="btn btn-primary">Agregar Turno</button>
-    </form>
-  
+<div class="container mt-5 p-4 gradient-bg rounded text-white">
+  <h2 class="text-center">Gestión de Turnos</h2>
+  <p class="text-center lead">
+    Añade, visualiza y administra los turnos disponibles.
+  </p>
+
+  <form (ngSubmit)="addTurno()" class="d-flex flex-column align-items-center mt-4">
+    <div class="mb-3 w-75">
+      <label for="nombreTurno" class="form-label">Nombre del Turno:</label>
+      <input
+        type="text"
+        id="nombreTurno"
+        [(ngModel)]="newTurno.nombre"
+        name="nombre"
+        class="form-control"
+        placeholder="Ejemplo: Turno Mañana"
+        required
+      />
+    </div>
+    <div class="mb-3 w-75">
+      <label for="horaInicio" class="form-label">Hora de Inicio:</label>
+      <input
+        type="time"
+        id="horaInicio"
+        [(ngModel)]="newTurno.horaInicio"
+        name="horaInicio"
+        class="form-control"
+        required
+      />
+    </div>
+    <div class="mb-3 w-75">
+      <label for="horaFin" class="form-label">Hora de Fin:</label>
+      <input
+        type="time"
+        id="horaFin"
+        [(ngModel)]="newTurno.horaFin"
+        name="horaFin"
+        class="form-control"
+        required
+      />
+    </div>
+    <button type="submit" class="btn btn-primary w-50">Agregar Turno</button>
+  </form>
+
+  <div class="mt-5">
+    <h3 class="text-center">Lista de Turnos</h3>
     <ul class="list-group mt-3">
-      <li *ngFor="let turno of turnos" class="list-group-item">
-        {{ turno.nombre }} - {{ turno.horaInicio }} a {{ turno.horaFin }}
-        <button (click)="deleteTurno(turno.id)" class="btn btn-danger btn-sm float-end">Eliminar</button>
+      <li
+        *ngFor="let turno of turnos"
+        class="list-group-item d-flex justify-content-between align-items-center"
+      >
+        <div>
+          <strong>{{ turno.nombre }}</strong> <br />
+          {{ turno.horaInicio }} - {{ turno.horaFin }}
+        </div>
+        <button
+          (click)="deleteTurno(turno.id)"
+          class="btn btn-danger btn-sm"
+        >
+          Eliminar
+        </button>
       </li>
     </ul>
   </div>
-  
+</div>
