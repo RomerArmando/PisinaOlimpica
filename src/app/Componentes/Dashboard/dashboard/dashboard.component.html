@@ -1,6 +1,24 @@
-<div class="container mt-4">
-    <h2>Dashboard</h2>
-    <p>Total de horas trabajadas: {{ totalHoras }}</p>
-    <p>Sueldo: ${{ sueldo }}</p>
+<div class="container mt-4 p-4 gradient-bg rounded text-white">
+    <h2 class="text-center">Dashboard</h2>
+    <p class="text-center lead">Selecciona un profesor para ver sus horas trabajadas y su sueldo.</p>
+  
+    <div class="form-group mt-3">
+      <label for="profesorSelect" class="form-label">Seleccionar Profesor:</label>
+      <select
+  id="profesorSelect"
+  class="form-select"
+  [(ngModel)]="selectedProfesorId"
+  (change)="calcularHorasYSalario(selectedProfesorId)"
+>
+  <option value="" disabled selected>-- Seleccione un Profesor --</option>
+  <option *ngFor="let profesor of profesores" [value]="profesor.id">
+    {{ profesor.nombre }}
+  </option>
+</select>
+    </div>  
+    <div *ngIf="selectedProfesorId" class="mt-4">
+      <p><strong>Total de horas trabajadas:</strong> {{ totalHoras || 'No disponible' }}</p>
+      <p><strong>Sueldo:</strong> ${{ sueldo || 'No disponible' }}</p>
+    </div>
   </div>
   

@@ -60,3 +60,7 @@ footer .container {
     justify-content: center; 
     align-items: center;      
 }
+
+#welcome-text {
+    text-align: center;
+  }

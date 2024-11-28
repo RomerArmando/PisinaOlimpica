@@ -26,4 +26,7 @@ export const ApiEndpoints = {
     GET_ALL: `${API_BASE_URL}/niveles/get`,
     ADD: `${API_BASE_URL}/niveles/add`,
   },
+  PROFESORES: {
+    GET_ALL: `${API_BASE_URL}/profesores/get`,
+  },
 };

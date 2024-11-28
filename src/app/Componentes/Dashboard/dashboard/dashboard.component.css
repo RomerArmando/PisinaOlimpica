@@ -1,0 +1,30 @@
+.gradient-bg {
+    background: linear-gradient(135deg, #ff7b7b, #7744ff, #44ccff);
+    color: white;
+  }
+  
+  .container {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+  }
+  
+  h2 {
+    font-weight: bold;
+  }
+  
+  form-group {
+    margin-bottom: 16px;
+  }
+  
+  form-select {
+    background-color: #fff;
+    color: #000;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  form-select:focus {
+    outline: none;
+    box-shadow: 0 0 4px #7744ff;
+  }
+  
